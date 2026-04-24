@@ -99,7 +99,7 @@ def insert_cases_for_year(year: int):
                     "language": str(row.get("languageisocode", "ENG"))[:10],
                     "is_important": bool(row.get("importance")),
                     "citation_count": 0,
-                    "pdf_url": f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [itemid]}), safe="")}',
+                    "pdf_url": f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [itemid]}, separators=(",", ":")), safe="")}',
                 }
                 
                 case = Case(**case_data)

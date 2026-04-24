@@ -144,8 +144,8 @@ def process_case_item(
             "language": language,
             "is_important": item.get("importance") or item.get("is_important") or False,
             "citation_count": item.get("citation_count") or 0,
-            # Construct URL to ECHR HUDOC case page with properly URL-encoded JSON
-            "pdf_url": f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [itemid]}), safe="")}' if itemid else None,
+            # Construct URL to ECHR HUDOC case page with properly URL-encoded JSON (compact format without spaces)
+            "pdf_url": f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [itemid]}, separators=(",", ":")), safe="")}' if itemid else None,
         }
 
         # Include full text if available and requested
