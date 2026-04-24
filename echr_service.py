@@ -114,8 +114,9 @@ def process_case_item(
             return {}
         
         # Extract common fields (adjust based on actual echr-extractor output structure)
+        itemid = item.get("itemid") or item.get("appno") or item.get("id") or item.get("caseNumber") or ""
         case = {
-            "itemid": item.get("itemid") or item.get("appno") or item.get("id") or item.get("caseNumber") or "",
+            "itemid": itemid,
             "appno": item.get("appno") or item.get("caseNumber") or item.get("id") or "",
             "docname": item.get("docname") or item.get("name") or item.get("title") or "",
             "country": extract_country(item),
@@ -141,6 +142,8 @@ def process_case_item(
             "language": language,
             "is_important": item.get("importance") or item.get("is_important") or False,
             "citation_count": item.get("citation_count") or 0,
+            # Construct PDF URL - links to ECHR HUDOC database
+            "pdf_url": f"https://hudoc.echr.coe.int/app/conversion/pdf/?library=ECHR&id={itemid}" if itemid else None,
         }
 
         # Include full text if available and requested

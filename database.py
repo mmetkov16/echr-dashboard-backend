@@ -65,6 +65,9 @@ class Case(Base):
     # Full Text (optional, can be large)
     full_text = Column(Text, nullable=True)
     
+    # Document Links
+    pdf_url = Column(String(500), nullable=True)  # URL to case judgment PDF
+    
     # Metadata
     language = Column(String(10), default="ENG", nullable=False)
     is_important = Column(Boolean, default=False)

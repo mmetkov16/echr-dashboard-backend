@@ -27,6 +27,7 @@ class CaseBase(BaseModel):
     language: str = "ENG"
     is_important: bool = False
     citation_count: int = 0
+    pdf_url: Optional[str] = None
 
 
 class CaseCreate(CaseBase):
