@@ -142,8 +142,8 @@ def process_case_item(
             "language": language,
             "is_important": item.get("importance") or item.get("is_important") or False,
             "citation_count": item.get("citation_count") or 0,
-            # Construct PDF URL - links to ECHR HUDOC database
-            "pdf_url": f"https://hudoc.echr.coe.int/app/conversion/pdf/?library=ECHR&id={itemid}" if itemid else None,
+            # Construct URL to ECHR HUDOC case page with itemid
+            "pdf_url": f'https://hudoc.echr.coe.int/#{{"itemid":["' + itemid + '"]}' if itemid else None,
         }
 
         # Include full text if available and requested

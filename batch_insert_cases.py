@@ -97,7 +97,7 @@ def insert_cases_for_year(year: int):
                     "language": str(row.get("languageisocode", "ENG"))[:10],
                     "is_important": bool(row.get("importance")),
                     "citation_count": 0,
-                    "pdf_url": f"https://hudoc.echr.coe.int/app/conversion/pdf/?library=ECHR&id={itemid}",
+                    "pdf_url": f'https://hudoc.echr.coe.int/#{{"itemid":["' + itemid + '"]}',
                 }
                 
                 case = Case(**case_data)
