@@ -116,7 +116,8 @@ def process_case_item(
             return {}
         
         # Extract common fields (adjust based on actual echr-extractor output structure)
-        itemid = item.get("itemid") or item.get("appno") or item.get("id") or item.get("caseNumber") or ""
+        # Use itemid (001-XXXXX format) from library, NOT appno
+        itemid = item.get("itemid") or ""
         case = {
             "itemid": itemid,
             "appno": item.get("appno") or item.get("caseNumber") or item.get("id") or "",

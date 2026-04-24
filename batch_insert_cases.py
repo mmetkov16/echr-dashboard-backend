@@ -10,6 +10,7 @@ from datetime import datetime
 import json
 from urllib.parse import quote
 import logging
+import pandas as pd
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -67,9 +68,12 @@ def insert_cases_for_year(year: int):
         skipped = 0
         for _, row in df.iterrows():
             try:
-                # Use appno as unique identifier (itemid not reliable)
-                appno = row.get("appno", "")
-                if not appno:
+                # Use itemid (001-XXXXX format) from echr-extractor library
+                itemid = str(row.get("itemid")) if pd.notna(row.get("itemid")) else ""
+                appno = str(row.get("appno")) if pd.notna(row.get("appno")) else ""
+                
+                # Skip if no itemid or appno
+                if not itemid or not appno:
                     skipped += 1
                     continue
                 
@@ -80,9 +84,9 @@ def insert_cases_for_year(year: int):
                     continue
                 
                 # Create case object with safe defaults
-                itemid = appno
+                appno = row.get("appno", "")
                 case_data = {
-                    "itemid": itemid,  # Use appno as itemid
+                    "itemid": itemid,  # Use itemid (001-XXXXX) not appno
                     "appno": appno,
                     "docname": str(row.get("docname", ""))[:500],
                     "country": str(row.get("respondent", ""))[:100],
