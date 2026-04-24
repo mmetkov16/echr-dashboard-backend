@@ -55,16 +55,22 @@ async def get_statistics(db: Session = Depends(get_db)) -> StatisticsResponse:
             (violation_cases / total_cases * 100) if total_cases > 0 else 0
         )
 
-        # Cases by country
-        countries_data = (
-            db.query(Case.country, func.count(Case.id).label("count"))
-            .filter(Case.country.isnot(None))
-            .group_by(Case.country)
-            .order_by(func.count(Case.id).desc())
-            .all()
-        )
-        by_country = {country: count for country, count in countries_data}
-        top_countries = countries_data[:10]
+        # Cases by country (parse semicolon-separated countries)
+        all_cases = db.query(Case.country).filter(Case.country.isnot(None)).all()
+        country_counts = {}
+        for (country_str,) in all_cases:
+            if country_str:
+                # Split by semicolon and count each country
+                countries = [c.strip() for c in country_str.split(';') if c.strip()]
+                for country in countries:
+                    country_counts[country] = country_counts.get(country, 0) + 1
+        
+        by_country = country_counts
+        top_countries = sorted(
+            country_counts.items(), 
+            key=lambda x: x[1], 
+            reverse=True
+        )[:10]
 
         # Cases by year
         years_data = (
