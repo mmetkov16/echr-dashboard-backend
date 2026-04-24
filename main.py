@@ -77,6 +77,29 @@ async def lifespan(app: FastAPI):
     try:
         init_db()
         logger.info("Database initialized successfully")
+        
+        # Auto-populate database if empty (for Railway deployment)
+        from database import Case, SessionLocal
+        db = SessionLocal()
+        case_count = db.query(Case).count()
+        db.close()
+        
+        if case_count == 0:
+            logger.info("Database is empty. Auto-populating with ECHR cases...")
+            try:
+                from batch_insert_cases import insert_cases_for_year
+                total = 0
+                for year in range(1990, 2027):
+                    logger.info(f"Inserting cases for year {year}...")
+                    inserted = insert_cases_for_year(year)
+                    total += inserted
+                logger.info(f"Successfully populated database with {total} cases")
+            except Exception as e:
+                logger.error(f"Failed to auto-populate database: {e}")
+                logger.warning("Continuing startup without data. Manual population required.")
+        else:
+            logger.info(f"Database already contains {case_count} cases")
+            
     except Exception as e:
         logger.error(f"Failed to initialize database: {e}")
         raise
