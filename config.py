@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     SQLALCHEMY_ECHO: bool = False
     
     # CORS Configuration
-    CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:3001"]
+    CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:3001", "https://nutcase-harness-flakily.ngrok-free.dev", "*"]
     CORS_CREDENTIALS: bool = True
     CORS_METHODS: list = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
     CORS_HEADERS: list = ["*"]

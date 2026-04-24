@@ -9222,3 +9222,1117 @@ Traceback (most recent call last):
     if not a.type._isnull:
            ^^^^^^^^^^^^^^
 AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 09:30:33,959 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 09:30:33,962 - database - INFO - init_db:137 - Database tables created successfully
+2026-04-24 09:30:33,963 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 09:30:33,964 - main - INFO - lifespan:87 - Shutting down ECHR Dashboard API
+2026-04-24 09:30:51,861 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 09:30:51,864 - database - INFO - init_db:137 - Database tables created successfully
+2026-04-24 09:30:51,864 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 09:30:57,759 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 09:30:57,761 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 09:30:57,762 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 09:33:02,593 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 09:33:02,597 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 09:33:02,599 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 09:36:37,301 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 09:36:37,303 - database - INFO - init_db:137 - Database tables created successfully
+2026-04-24 09:36:37,304 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 09:49:36,144 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 09:49:36,147 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 09:49:36,148 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 09:50:27,685 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 09:50:27,687 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 09:50:27,689 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 09:52:58,949 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 09:52:58,951 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 09:52:58,953 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 09:59:26,216 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 09:59:26,221 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 09:59:26,222 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:03:09,413 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:03:09,417 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:03:09,418 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:03:17,511 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:03:17,513 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:03:17,513 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:03:37,242 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:03:37,251 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:03:37,252 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:05:39,561 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:05:39,569 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:05:39,571 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:08:28,507 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:08:28,512 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:08:28,514 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:12:11,715 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:12:11,719 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:12:11,720 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:17:51,738 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:17:51,740 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:17:51,741 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:18:34,718 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:18:34,720 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:18:34,721 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:18:45,043 - routers.statistics - ERROR - get_trends:207 - Error generating trends: 'int' object has no attribute '_isnull'
+2026-04-24 10:18:45,047 - main - ERROR - log_requests:161 - Request failed: GET /api/v1/trends - 'int' object has no attribute '_isnull'
+2026-04-24 10:18:45,048 - main - ERROR - general_exception_handler:141 - Unexpected exception: 'int' object has no attribute '_isnull'
+Traceback (most recent call last):
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\main.py", line 157, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\statistics.py", line 139, in get_trends
+    func.sum(Case.violation.cast(type_=int)).label("violations"),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 993, in __call__
+    return func(*c, **o)
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\functions.py", line 1678, in __init__
+    kwargs.setdefault("type_", _type_from_args(fn_args))
+                               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\mustafa.metkov\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sqlalchemy\sql\elements.py", line 5350, in _type_from_args
+    if not a.type._isnull:
+           ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_isnull'
+2026-04-24 10:20:25,992 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 10:20:25,996 - database - INFO - init_db:140 - Database tables created successfully
+2026-04-24 10:20:25,996 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 10:20:25,998 - main - INFO - lifespan:87 - Shutting down ECHR Dashboard API
+2026-04-24 10:21:04,283 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 10:21:04,286 - database - INFO - init_db:140 - Database tables created successfully
+2026-04-24 10:21:04,287 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 10:49:42,173 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 10:49:42,176 - database - INFO - init_db:140 - Database tables created successfully
+2026-04-24 10:49:42,177 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 10:49:42,178 - main - INFO - lifespan:87 - Shutting down ECHR Dashboard API
+2026-04-24 10:49:55,399 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 10:49:55,402 - database - INFO - init_db:140 - Database tables created successfully
+2026-04-24 10:49:55,402 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 11:25:27,689 - main - WARNING - validation_exception_handler:127 - Validation Error: 1 validation error:
+  {'type': 'int_parsing', 'loc': ('query', 'page'), 'msg': 'Input should be a valid integer, unable to parse string as an integer', 'input': '1^'}
+
+  File "C:\Users\mustafa.metkov\OneDrive - Valtech\Desktop\CopilotExperiments\GrokDecision\echr-dashboard\backend\routers\cases.py", line 19, in list_cases
+    GET /api/v1/cases
+2026-04-24 11:34:50,834 - main - INFO - lifespan:76 - Starting ECHR Dashboard API
+2026-04-24 11:34:50,837 - database - INFO - init_db:140 - Database tables created successfully
+2026-04-24 11:34:50,837 - main - INFO - lifespan:79 - Database initialized successfully
+2026-04-24 11:40:17,806 - main - WARNING - http_exception_handler:114 - HTTP Exception: 404 - Not Found
+2026-04-24 11:40:29,886 - main - WARNING - http_exception_handler:114 - HTTP Exception: 404 - Not Found
