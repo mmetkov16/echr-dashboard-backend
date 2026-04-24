@@ -8,6 +8,8 @@ from config import get_settings
 import logging
 import sqlite3
 import os
+import json
+from urllib.parse import quote
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -57,9 +59,9 @@ def migrate_pdf_urls():
         
         updated = 0
         for case in cases:
-            if case.itemid and not case.pdf_url:
-                # Generate URL in format: https://hudoc.echr.coe.int/#{%22itemid%22:[%22ITEMID%22]}
-                case.pdf_url = f'https://hudoc.echr.coe.int/#{{"itemid":["' + case.itemid + '"]}' 
+            if case.itemid:
+                # Generate URL with properly URL-encoded JSON
+                case.pdf_url = f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [case.itemid]}), safe="")}'
                 updated += 1
                 
                 if updated % 100 == 0:

@@ -3,9 +3,11 @@ ECHR extraction service - integrates with echr-extractor library
 """
 import logging
 import time
+import json
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import quote
 from echr_extractor import get_echr, get_echr_extra
 
 logger = logging.getLogger(__name__)
@@ -142,8 +144,8 @@ def process_case_item(
             "language": language,
             "is_important": item.get("importance") or item.get("is_important") or False,
             "citation_count": item.get("citation_count") or 0,
-            # Construct URL to ECHR HUDOC case page with itemid
-            "pdf_url": f'https://hudoc.echr.coe.int/#{{"itemid":["' + itemid + '"]}' if itemid else None,
+            # Construct URL to ECHR HUDOC case page with properly URL-encoded JSON
+            "pdf_url": f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [itemid]}), safe="")}' if itemid else None,
         }
 
         # Include full text if available and requested

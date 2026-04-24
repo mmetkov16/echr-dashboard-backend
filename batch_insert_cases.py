@@ -7,6 +7,8 @@ Much more efficient than fetching all data at once
 from echr_extractor import get_echr
 from database import Case, SessionLocal
 from datetime import datetime
+import json
+from urllib.parse import quote
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -97,7 +99,7 @@ def insert_cases_for_year(year: int):
                     "language": str(row.get("languageisocode", "ENG"))[:10],
                     "is_important": bool(row.get("importance")),
                     "citation_count": 0,
-                    "pdf_url": f'https://hudoc.echr.coe.int/#{{"itemid":["' + itemid + '"]}',
+                    "pdf_url": f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [itemid]}), safe="")}',
                 }
                 
                 case = Case(**case_data)
