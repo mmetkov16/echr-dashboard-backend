@@ -60,8 +60,8 @@ def migrate_pdf_urls():
         updated = 0
         for case in cases:
             if case.itemid:
-                # Generate URL with properly URL-encoded JSON (compact format without spaces)
-                case.pdf_url = f'https://hudoc.echr.coe.int/#{quote(json.dumps({"itemid": [case.itemid]}, separators=(",", ":")), safe="")}'
+                # Generate URL with properly URL-encoded JSON (compact format, includes documentcollectionid2)
+                case.pdf_url = f'https://hudoc.echr.coe.int/#{quote(json.dumps({"documentcollectionid2": ["CHAMBER"], "itemid": [case.itemid]}, separators=(",", ":")), safe="")}'
                 updated += 1
                 
                 if updated % 100 == 0:
