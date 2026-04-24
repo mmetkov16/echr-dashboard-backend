@@ -5,7 +5,7 @@ import logging
 from datetime import datetime
 from typing import Dict, List, Tuple
 from fastapi import APIRouter, Depends
-from sqlalchemy import func, extract, and_
+from sqlalchemy import func, extract, and_, Integer
 from sqlalchemy.orm import Session
 
 from models import StatisticsResponse, TrendsResponse, YearlyTrendResponse
@@ -142,7 +142,7 @@ async def get_trends(db: Session = Depends(get_db)) -> TrendsResponse:
             db.query(
                 extract("year", Case.judgementdate).label("year"),
                 func.count(Case.id).label("total"),
-                func.sum(Case.violation.cast(type_=int)).label("violations"),
+                func.sum(Case.violation.cast(Integer)).label("violations"),
             )
             .filter(Case.judgementdate.isnot(None))
             .group_by(extract("year", Case.judgementdate))
